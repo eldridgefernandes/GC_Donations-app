@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "NkPUMs0QQ4w=",
+  "success": true,
+  "projectFilePath": "/Users/junewi/Documents/work/gc/Repos/technical-assessment/backend/backend.csproj",
+  "expectedPackageFiles": [
+    "/Users/junewi/.nuget/packages/microsoft.aspnetcore.openapi/9.0.8/microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
+    "/Users/junewi/.nuget/packages/microsoft.data.sqlite/9.0.8/microsoft.data.sqlite.9.0.8.nupkg.sha512",
+    "/Users/junewi/.nuget/packages/microsoft.data.sqlite.core/9.0.8/microsoft.data.sqlite.core.9.0.8.nupkg.sha512",
+    "/Users/junewi/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512",
+    "/Users/junewi/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.10/sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
+    "/Users/junewi/.nuget/packages/sqlitepclraw.core/2.1.10/sqlitepclraw.core.2.1.10.nupkg.sha512",
+    "/Users/junewi/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.10/sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512",
+    "/Users/junewi/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.10/sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
+    "/Users/junewi/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}

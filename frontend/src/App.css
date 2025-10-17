@@ -36,3 +36,117 @@
     transform: rotate(360deg);
   }
 }
+
+
+.container {
+  max-width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Form */
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.input-field {
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 25%;
+  transition: border-color 0.3s;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+}
+
+.top-donor {
+  padding: 0.5%;
+  font-size: 20px;
+  border-radius: 80px;
+  border: 1px solid #ccc;
+  width: 98%;
+  transition: border-color 0.3s;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.total-donations{
+  padding: 0.5%;
+  style: "currency";
+  currency: "CAD";
+  color: 00695c;
+  font-size: 20px;
+  border-radius: 100x;
+  border: 1px solid #ccc;
+  width: 98%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+.input-field:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.submit-button {
+  padding: 1.2% 4.2%;
+  font-size: 20px;
+  background-color: #007bff;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Table */
+.donation-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.donation-table th,
+.donation-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.donation-table th {
+  background-color: #00008B;
+  color: white;
+  font-size: 18px;
+}
+
+.donation-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Loading & Error */
+.loading, .error {
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.error {
+  color: red;
+}

@@ -38,34 +38,65 @@ function App() {
        date: form.date || new Date().toISOString()
       });
       await loadDonations();
-     
     }
     catch(error){
       console.error("Error submitting donation:", error);
     }
   };
 
+  const topDonor = donations.length > 0
+    ? donations.reduce((max, donor) => (donor.amount > max.amount ? donor : max), donations[0])
+    : null;
+  
+  const totalAmount = donations.reduce((sum, donation) => sum + parseFloat(donation.amount || 0), 0);
+
   useEffect(() => {loadDonations(); }, []);
-  if (loading) return <p>Loading donations...1</p>;
+  if (loading) return <p>Loading donations...</p>;
   if (error) return <p>{error}</p>;
 
   return (
-          <div>
+          <div className = "container = fluid">
           <h2>Donation Tracker</h2>
-          <input placeholder="Donor Name" onChange={e => setForm({...form, donorName: e.target.value})}/>
-          <input placeholder="Amount" type="number" onChange={e => setForm({...form, amount: e.target.value})}/>
-          <input type="date" onChange={e => setForm({...form, date: e.target.value})}/>
-          <button onClick={submitDonation}>Submit</button>
+          
+          <div classname = "form-container">
+           <input className="input-field" placeholder="Donor Name" value={form.donorName} 
+              onChange={e => setForm({ ...form, donorName: e.target.value })}/>
+          
+           <input className="input-field" placeholder="Amount" type="number" value={form.amount}
+              onChange={e => setForm({ ...form, amount: e.target.value })}/>
 
-          <table>
-          <thead><tr><th>Name</th><th>Amount</th><th>Date</th></tr></thead>
-           <tbody>
-             {donations.map(d => (
-                <tr key={d.id}><td>{d.donorName}</td><td>{d.amount}</td><td>{new Date(d.date).toLocaleDateString()}</td></tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+          {/* </div><input placeholder="Amount" type="number" onChange={e => setForm({...form, amount: e.target.value})}/> */}
+          
+          <input className="input-field" type="date" value={form.date || new Date().toISOString().split("T")[0]} 
+            onChange={e => setForm({ ...form, date: e.target.value })}/>
+          
+        
+          <button className="submit-button" onClick={submitDonation}>Submit</button>
+          </div>
+
+          {/* </div><button onClick={submitDonation}>Submit</button> */}
+          <div className="top-donor">
+            <h3><b>🎉<u>Top Donor</u>🎉</b></h3>
+            <p><b>{topDonor.donorName}</b> donated <b>${parseFloat(topDonor.amount).toFixed(2)}</b> on
+             {new Date(topDonor.date).toLocaleDateString()}</p>
+          </div>
+
+          <div className="total-donations">
+            <h3>Total Amount Collected: {new Intl.NumberFormat("en-CA", {
+              style: "currency",currency: "CAD",}).format(totalAmount || 0)}</h3>
+          </div>
+
+          <table className="donation-table">
+        <thead><tr><th>Name</th><th>Amount</th><th>Date</th></tr></thead>
+        <tbody>
+          {donations.map(d => (
+            <tr key={d.id}>
+              <td>{d.donorName}</td><td>${parseFloat(d.amount).toFixed(2)}</td><td>{new Date(d.date).toLocaleDateString()}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
     );
 }
 

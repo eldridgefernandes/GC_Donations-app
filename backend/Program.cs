@@ -79,6 +79,8 @@ public class DonationsController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> PostDonation(Donation donation)
     {
+        
+        donation.DonorName = string.IsNullOrWhiteSpace(donation.DonorName)? "Anonymous": donation.DonorName.Trim();
         _context.Donations.Add(donation);
         await _context.SaveChangesAsync();
         await _crm.SendToCRM(donation);
@@ -100,7 +102,7 @@ public class MockCRMService : ICRMService
 {
     public Task<string> SendToCRM(Donation donation)
     {
-        var response = new { status = "success", message = $"Donation from {donation.DonorName} sent to CRM." };
+        var response = new {status = "success", message = $"Donation from {donation.DonorName} sent to CRM." };
         Console.WriteLine(JsonSerializer.Serialize(response));
         return Task.FromResult(JsonSerializer.Serialize(response));
     }

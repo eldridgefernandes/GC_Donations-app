@@ -28,7 +28,17 @@ https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit
 9. If it isn't allowing to execute the react file due to a permission issue use the command line below in the terminal "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass"
 10. After the execution, the react app should open and display the output on the default browser
 11. The output will display fields to enter details for the donors, top donor, total amount collected as well as the table of donors existing donors
-  
+
+## Design Choices Made:
+1. Followed MVC Framework structure where the models contains the inputs fields like donor names, amount, etc needed followed by View 
+containing and Controller layer containing the API and HTTP requests
+2. Focussed on condensed package and minimial code snippets to promote faster load-time, better performance and lower memory requirement
+3. Async calls to increase better efficiency so that process are running parallel and can handle more request
+
+## Future Scope and Upcomming Updates:
+1. 
+
+
 ## Useful make commands for the repo
 
 `dotnet restore` 

@@ -24,11 +24,13 @@ https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit
 3. Click "import a repository"  <img width="3304" height="1686" alt="image" src="https://github.com/user-attachments/assets/16f90c81-f9f9-4986-b672-1b383b2046dd" />
 4. Use the clone URL from technical-assessment repo  <img width="2972" height="1708" alt="image" src="https://github.com/user-attachments/assets/99a54c7c-b437-440c-8b20-9ab3e099da77" />
 5. Create it as a "private" repository
-6. After importing the technical-assessment repo to your own account, you can clone it to your local machine
-7. Run `make all` and visit `localhost:3000` and `localhost:5050/ping` to confirm it is working
-8. Complete the assessment given to you using the cloned repo with proper commit messages and branching
-9. Go through the existing packages and file structure to figure out what you might want to use
-10. You can use additional packages to your liking and create new files as necessary  
+6. In Backend folder, execute the Program.cs file through the terminal using dotnet run or any other way 
+7. In the terminal if its displaying that is working, open the link where it is displaying "Now listening on: http://localhost:1234"
+   {in my case it was http://localhost:5050; you can also use the SwaggerUI interface}
+8. After the backend is working, execute the front end file - App.js through npm start in terminal or any other shortcuts
+9. If it isn't allowing to execute the react file due to permission use the command line below in the terminal "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass"
+10. After the execution, the react app should open and display the output
+11. Initially the output will display fields to enter details for the donors and also the table of donors 
   
 ## Useful make commands for the repo
 

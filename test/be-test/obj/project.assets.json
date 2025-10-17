@@ -1126,24 +1126,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/junewi/.nuget/packages/": {}
+    "C:\\Users\\12269\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/junewi/Documents/work/gc/Repos/technical-assessment/test/be-test/be-test.csproj",
+      "projectUniqueName": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_technical-assessment-main\\test\\be-test\\be-test.csproj",
       "projectName": "be-test",
-      "projectPath": "/Users/junewi/Documents/work/gc/Repos/technical-assessment/test/be-test/be-test.csproj",
-      "packagesPath": "/Users/junewi/.nuget/packages/",
-      "outputPath": "/Users/junewi/Documents/work/gc/Repos/technical-assessment/test/be-test/obj/",
+      "projectPath": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_technical-assessment-main\\test\\be-test\\be-test.csproj",
+      "packagesPath": "C:\\Users\\12269\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_technical-assessment-main\\test\\be-test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/junewi/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\12269\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1209,7 +1211,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

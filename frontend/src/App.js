@@ -181,7 +181,7 @@ function App() {
 
           {/* </div><button onClick={submitDonation}>Submit</button> */}
           <div className="top-donor">
-            <h3><b>🎉<u>Top Donor</u>🎉</b></h3>
+            <h3><b><u>Top Donor!</u></b></h3>
             <p><b>{topDonor.donorfirstname} {topDonor.donorlastname} </b>
              donated <b>${parseFloat(topDonor.amount).toFixed(2)}</b> on {new Date(topDonor.date).toLocaleDateString()}</p>
           </div>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_1\\backend\\backend.csproj": {}
+    "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_2\\backend\\backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_1\\backend\\backend.csproj": {
+    "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_2\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_1\\backend\\backend.csproj",
+        "projectUniqueName": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_2\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_1\\backend\\backend.csproj",
+        "projectPath": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_2\\backend\\backend.csproj",
         "packagesPath": "C:\\Users\\12269\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_1\\backend\\obj\\",
+        "outputPath": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_2\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\12269\\AppData\\Roaming\\NuGet\\NuGet.Config",

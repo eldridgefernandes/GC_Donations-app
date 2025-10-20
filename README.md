@@ -36,8 +36,11 @@ containing and Controller layer containing the API and HTTP requests
 3. Async calls to increase better efficiency so that process are running parallel and can handle more request
 
 ## Future Scope and Upcomming Updates:
-1. 
-
+1. Import CSV file 
+2. Docker file 
+3. Using AI chatbot agent to automate triangulating details
+4. Trend graphs to display projections using PowerBI and analytical softwares
+5. Better UI, faster execution time and lower memory requirement
 
 ## Useful make commands for the repo
 

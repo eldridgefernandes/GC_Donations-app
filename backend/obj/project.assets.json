@@ -4520,11 +4520,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_3\\backend\\backend.csproj",
       "projectName": "backend",
       "projectPath": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_3\\backend\\backend.csproj",
       "packagesPath": "C:\\Users\\12269\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_3\\backend\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_2\\backend\\backend.csproj",
+      "projectName": "backend",
+      "projectPath": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_2\\backend\\backend.csproj",
+      "packagesPath": "C:\\Users\\12269\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_2\\backend\\obj\\",
+>>>>>>> 6f9034ca091ec3643a06edad0ed6bd215df735fe
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\12269\\AppData\\Roaming\\NuGet\\NuGet.Config",

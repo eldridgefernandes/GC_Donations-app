@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "RKSqTEsQbBc=",
   "success": true,
   "projectFilePath": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_3\\backend\\backend.csproj",
-=======
-  "dgSpecHash": "RfeqA2pEfbk=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\12269\\Desktop\\Proj_Great_Commision_2\\backend\\backend.csproj",
->>>>>>> 6f9034ca091ec3643a06edad0ed6bd215df735fe
   "expectedPackageFiles": [
     "C:\\Users\\12269\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\12269\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",

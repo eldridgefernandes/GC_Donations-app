@@ -149,11 +149,29 @@ const DonationsTable = () => {
           <button className="submit-button" onClick={submitDonation}>Submit</button>
           </div>
 
-          <div className="top-donor">
+          {/* <div className="top-donor">
             <h3><b><u>Top Donor!</u></b></h3>
             <p><b>{topDonor.donorfirstname} {topDonor.donorlastname} </b>
              donated <b>${parseFloat(topDonor.amount).toFixed(2)}</b> on {new Date(topDonor.date).toLocaleDateString()}</p>
-          </div>
+          </div> */}
+
+          {
+            topDonor ? (
+              <div className="top-donor">
+                <h3>🥇 Top Donor!</h3>
+                <p>
+                <strong>{topDonor.donorfirstname || 'N/A'} {topDonor.donorlastname || ''}</strong>{' '}
+                  donated <strong>${parseFloat(topDonor.amount || 0).toFixed(2)}</strong>{' '}
+                on {new Date(topDonor.date).toLocaleDateString()}
+                </p>
+              </div>
+            ) : (
+              <div className="top-donor">
+                <h3>No donations yet</h3>
+                <p>Be the first to contribute!</p>
+              </div>
+            )
+          }
 
           <div className="total-donations">
             <h3>Total Amount Collected: {new Intl.NumberFormat("en-CA", {

@@ -1,6 +1,17 @@
 ﻿{
   "$schema": "https://json.schemastore.org/launchsettings.json",
   "profiles": {
+
+    "backend": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:5050",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "SMTP_ENCRYPTION_KEY": "MySuperSecretKey123!"
+      }
+    },
     "http": {
       "commandName": "Project",
       "dotnetRunMessages": true,

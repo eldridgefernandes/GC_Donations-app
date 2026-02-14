@@ -1,5 +1,3 @@
-bin/
-obj/
-*.db
-# Created by GitHub
-*.log
+/bin/Debug/
+/obj/Debug/
+nohup.out

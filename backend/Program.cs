@@ -13,11 +13,19 @@ using System.Text;
 using System.Security.Cryptography;
 
 var builder = WebApplication.CreateBuilder(args);
+// Force Docker binding
+if (Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER") == "true")
+{
+    builder.WebHost.UseUrls("http://0.0.0.0:5050");
+}
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(); //Used Swagger over OpenAPI interface
-builder.Services.AddControllers();
-
+builder.Services.AddControllers()
+.AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNamingPolicy = null; // Keeps your lowercase property names
+    });
 //The below block is for allowing React to read from the database because of the port difference
 builder.Services.AddCors(options =>
 {
@@ -30,21 +38,23 @@ builder.Services.AddCors(options =>
 
 //Using Sqlite database 
 builder.Services.AddDbContext<DonationContext>(options =>
-    options.UseSqlite("Data Source=donations.db"));
-    // options.UseSqlite("Data Source=/app/data/donations.db")); -- For Docker
+    // options.UseSqlite("Data Source=donations.db"));
+    options.UseSqlite("Data Source=/app/donations.db")); 
+    // -- For Docker
 
 builder.Services.AddScoped<ICRMService, MockCRMService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 
 var app = builder.Build();
 
-//If any columns in the database is added, we need to delete and create a new database
+// If any columns in the database is added, we need to delete and create a new database
 using (var scope = app.Services.CreateScope())
-// {
-//     var db = scope.ServiceProvider.GetRequiredService<DonationContext>();
-//     db.Database.EnsureDeleted();   // optional: drops old db if exists
-//     db.Database.EnsureCreated();   // creates tables from your model
-// }
+{
+    var db = scope.ServiceProvider.GetRequiredService<DonationContext>();
+    // db.Database.EnsureDeleted();   // optional: drops old db if exists
+    db.Database.EnsureCreated();   // creates tables from your model
+    Console.WriteLine("✅ Donations table created!");
+}
 
 app.UseCors("AllowReactApp");
 app.UseSwagger();
@@ -64,6 +74,10 @@ app.Run();
 // setx SMTP_PASSWORD "idkpbcyqydzflvcp"
 
 //Class for defining and initialising inputs needed
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
 public class Donation
 {
     public int Id { get; set; }

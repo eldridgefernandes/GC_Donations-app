@@ -84,3 +84,12 @@ _lists PIDs for port 5050 and 3000_
 
 `make list-pid-windows`  
 _lists PIDs for port 5050 and 3000_
+
+
+
+Clean README
+Screenshots
+Live demo (if possible)
+Clear tech stack
+Deployment instructions
+Dockerfile visible
